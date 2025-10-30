@@ -1,0 +1,130 @@
+# Generic .gitignore for a backend project (Node/Python/Java/.NET/Ruby/Go + common tools/OS/IDEs)
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs ===
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+coverage/coverage-final.json
+
+# === Environment / Secrets ===
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secrets.yml
+*.key
+*.pem
+
+# === Dependency directories ===
+node_modules/
+venv/
+ENV/
+env/
+.venv/
+venv.bak/
+site-packages/
+
+# === Build / Output ===
+dist/
+build/
+out/
+target/
+bin/
+obj/
+*.class
+*.war
+*.jar
+*.pyc
+__pycache__/
+coverage/
+*.egg-info/
+.eggs/
+
+# === Package managers / lock artifacts (optional) ===
+# Uncomment if you do not commit lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# Gemfile.lock
+# Pipfile.lock
+
+# === IDEs / Editors ===
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.rsuser
+*.swp
+*.swo
+
+# === Container / virtualization ===
+docker-compose.override.yml
+.docker/
+Dockerfile.debug
+*.tgz
+
+# === CI / Build system artifacts ===
+.cargo/
+.gradle/
+.cache/
+.npm/
+.pnp.*
+.terraform/
+
+# === Framework / Runtime specific ===
+.next/
+.nuxt/
+.serverless/
+.svelte-kit/
+.parcel-cache/
+.cache/
+dist-ssr/
+
+# === Python specifics ===
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+
+# === Ruby specifics ===
+.bundle/
+vendor/bundle/
+log/
+tmp/
+.byebug_history
+
+# === Go specifics ===
+vendor/
+Godeps/
+*.exe
+*.test
+
+# === .NET specifics ===
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# === Misc ===
+*.sqlite
+*.db
+*.sqlite3
+coverage/
+reports/
+
+# End of file
