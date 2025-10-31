@@ -7,14 +7,25 @@ const VALID_CODES = {
   FLAT100: { type: "flat", value: 100 },
 };
 
-export const validatePromo = asyncHandler(async (req: Request, res: Response) => {
-  const parse = promoSchema.safeParse(req.body);
-  if (!parse.success) return res.status(400).json({ error: parse.error.issues });
+export const validatePromo = asyncHandler(
+  async (req: Request, res: Response) => {
+    const parse = promoSchema.safeParse(req.body);
+    if (!parse.success)
+      return res.status(400).json({ error: parse.error.issues });
 
-  const { code } = parse.data;
-  const promo = VALID_CODES[code as keyof typeof VALID_CODES];
+    const { code } = parse.data;
+    const promo = VALID_CODES[code as keyof typeof VALID_CODES];
 
-  if (!promo) return res.status(404).json({ valid: false, message: "Invalid promo code" });
+    if (!promo)
+      return res
+        .status(404)
+        .json({ valid: false, message: "Invalid promo code" });
 
-  res.json({ valid: true, discount: promo });
-});
+    res.json({
+      valid: true,
+      type: promo.type,
+      value: promo.value,
+      discount: promo.value,
+    });
+  }
+);

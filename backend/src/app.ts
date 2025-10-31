@@ -3,7 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import experienceRoutes from "./routes/experience.routes";
-import bookingRoutes from "./routes/booking.routes";
+import bookingRoutes from "./routes/booking.routes"
 import promoRoutes from "./routes/promo.routes";
 
 const app = express();
