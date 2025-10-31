@@ -101,10 +101,8 @@ export default function ExperienceDetailsPage() {
         time: selectedTime,
       };
 
-      console.log("Booking Payload:", payload);
       const res = await api.post("/bookings", payload);
 
-      console.log(res)
 
       if (res.status === 201 || res.status === 200) {
         setBookingConfirmed(true);
